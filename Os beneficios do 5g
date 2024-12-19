@@ -1,0 +1,54 @@
+# 5G Benefits for Industries
+
+# This script explains the key benefits of 5G technology for various industries.
+# It is organized by industry and provides a summary of how 5G impacts each sector.
+
+class Industry5G:
+    def __init__(self, name):
+        self.name = name
+        self.benefits = []
+
+    def add_benefit(self, benefit):
+        """Adds a benefit to the industry."""
+        self.benefits.append(benefit)
+
+    def display_benefits(self):
+        """Displays the benefits of 5G for the industry."""
+        print(f"\n{self.name} Industry:")
+        for i, benefit in enumerate(self.benefits, 1):
+            print(f"  {i}. {benefit}")
+
+# Create instances for different industries
+manufacturing = Industry5G("Manufacturing")
+logistics = Industry5G("Logistics")
+healthcare = Industry5G("Healthcare")
+agriculture = Industry5G("Agriculture")
+energy = Industry5G("Energy")
+
+# Adding benefits for each industry
+manufacturing.add_benefit("Enables real-time automation with low latency.")
+manufacturing.add_benefit("Improves predictive maintenance through IoT sensors.")
+manufacturing.add_benefit("Enhances efficiency with collaborative robots (cobots).")
+
+logistics.add_benefit("Allows real-time tracking of goods and assets.")
+logistics.add_benefit("Facilitates autonomous vehicles and drone deliveries.")
+logistics.add_benefit("Optimizes supply chain management with faster data exchange.")
+
+healthcare.add_benefit("Enables remote surgeries and telemedicine services.")
+healthcare.add_benefit("Improves patient monitoring with connected devices.")
+healthcare.add_benefit("Allows instant transmission of high-resolution medical images.")
+
+agriculture.add_benefit("Supports precision farming with IoT and sensors.")
+agriculture.add_benefit("Optimizes resource usage, such as water and fertilizers.")
+agriculture.add_benefit("Facilitates drone-based monitoring and data collection.")
+
+energy.add_benefit("Enhances smart grid management with real-time monitoring.")
+energy.add_benefit("Improves efficiency of distributed energy resources.")
+energy.add_benefit("Supports predictive maintenance for energy infrastructure.")
+
+# Display benefits for each industry
+for industry in [manufacturing, logistics, healthcare, agriculture, energy]:
+    industry.display_benefits()
+
+# Conclusion
+print("\nConclusion: 5G technology revolutionizes industries by enabling faster, more reliable, and innovative solutions.")
